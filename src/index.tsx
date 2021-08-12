@@ -4,9 +4,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import RootLiveGameModule from './modules/livegame/src';
 import { makeStore } from './redux/store';
-import {
-    BrowserRouter as Router
-} from "react-router-dom";
 const store = makeStore();
 
 // ReactDOM.render(
