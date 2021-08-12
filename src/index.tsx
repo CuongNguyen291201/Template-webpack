@@ -9,28 +9,28 @@ import {
 } from "react-router-dom";
 const store = makeStore();
 
-ReactDOM.render(
-    <Router basename="/livegame">
-        <Provider store={store.store}>
-            <PersistGate loading={null} persistor={store.persistor}>
-                <RootLiveGameModule
-                    oldSystemUser={{
-                        account: "kientest2",
-                        name: "test 2"
-                    }}
-                />
-            </PersistGate>
-        </Provider>
-    </Router>
-    ,
-    document.getElementById("livegame"));
+// ReactDOM.render(
+//     <Router basename="/livegame">
+//         <Provider store={store.store}>
+//             <PersistGate loading={null} persistor={store.persistor}>
+//                 <RootLiveGameModule
+//                     oldSystemUser={{
+//                         account: "kientest2",
+//                         name: "test 2"
+//                     }}
+//                 />
+//             </PersistGate>
+//         </Provider>
+//     </Router>
+//     ,
+//     document.getElementById("livegame"));
 
 
 export const initDeothetinduoc = (props: any) => {
     console.log("PROPS TRUYỀN SANG ĐÂY LÀY: ", props);
 
     ReactDOM.render(
-        <Router basename="/livegame">
+        // <Router basename="/livegame">
             <Provider store={store.store}>
                 <PersistGate loading={null} persistor={store.persistor}>
                     <RootLiveGameModule
@@ -38,7 +38,7 @@ export const initDeothetinduoc = (props: any) => {
                     />
                 </PersistGate>
             </Provider>
-        </Router>
+        // </Router>
         ,
         document.getElementById("livegame"));
 }

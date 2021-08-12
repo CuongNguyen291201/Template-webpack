@@ -42,7 +42,7 @@ module.exports = async (env, agrv) => {
         //     patterns: copyPluginPatterns
         // }),
         new MiniCssExtractPlugin({
-            filename: isDev ? "[name].css" : "static/css/[name].[contenthash:6].css"
+            filename: isDev ? "css/site.css" : "static/css/site.min.css"
         }),
         new webpack.ProgressPlugin()
     ]
@@ -57,7 +57,10 @@ module.exports = async (env, agrv) => {
         prodPlugins = [...prodPlugins, new BundleAnalyzerPlugin()]
     }
     return {
-        entry: "./src/index.tsx",
+        entry: [
+            "./src/index.tsx",
+            // "./src/index.scss"
+        ],
         output: {
             // path: path.resolve("build"),
             // publicPath: "/",
@@ -85,17 +88,7 @@ module.exports = async (env, agrv) => {
                 },
                 {
                     test: /\.(s[ac]ss|css)$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        {
-                            loader: "css-loader",
-                            options: { sourceMap: isDev ? true : false }
-                        },
-                        {
-                            loader: "sass-loader",
-                            options: { sourceMap: isDev ? true : false }
-                        }
-                    ]
+                    use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
                 },
                 {
                     test: /\.(eot|ttf|woff|woff2)$/,
@@ -129,7 +122,7 @@ module.exports = async (env, agrv) => {
                 "@": path.resolve("src"),
                 "@@": path.resolve()
             },
-            fallback: {  crypto: false },
+            fallback: { crypto: false },
 
         },
         devtool: isDev ? "source-map" : false,
