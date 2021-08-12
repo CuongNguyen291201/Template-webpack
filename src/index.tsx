@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import RootLiveGameModule from './modules/livegame/src';
 import { makeStore } from './redux/store';
 import {
-    BrowserRouter as Router, useHistory
+    BrowserRouter as Router
 } from "react-router-dom";
 const store = makeStore();
 
@@ -15,8 +15,8 @@ ReactDOM.render(
             <PersistGate loading={null} persistor={store.persistor}>
                 <RootLiveGameModule
                     oldSystemUser={{
-                        account: "kien1712111",
-                        name: "hàng cũ nhưng đẹp trai"
+                        account: "kientest2",
+                        name: "test 2"
                     }}
                 />
             </PersistGate>
