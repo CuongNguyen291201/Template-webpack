@@ -28,7 +28,6 @@ const store = makeStore();
 
 export const initDeothetinduoc = (props: any) => {
     console.log("PROPS TRUYỀN SANG ĐÂY LÀY: ", props);
-
     ReactDOM.render(
         // <Router basename="/livegame">
             <Provider store={store.store}>
