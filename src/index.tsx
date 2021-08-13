@@ -6,19 +6,19 @@ import RootLiveGameModule from './modules/livegame/src';
 import { makeStore } from './redux/store';
 const store = makeStore();
 
-ReactDOM.render(
-    <Provider store={store.store}>
-        <PersistGate loading={null} persistor={store.persistor}>
-            <RootLiveGameModule
-                oldSystemUser={{
-                    account: "kientest6",
-                    name: "test 6"
-                }}
-            />
-        </PersistGate>
-    </Provider>
-    ,
-    document.getElementById("livegame"));
+// ReactDOM.render(
+//     <Provider store={store.store}>
+//         <PersistGate loading={null} persistor={store.persistor}>
+//             <RootLiveGameModule
+//                 oldSystemUser={{
+//                     account: "kientest6",
+//                     name: "test 6"
+//                 }}
+//             />
+//         </PersistGate>
+//     </Provider>
+//     ,
+//     document.getElementById("livegame"));
 
 
 export const initDeothetinduoc = (props: any) => {
