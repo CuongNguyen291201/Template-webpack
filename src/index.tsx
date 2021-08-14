@@ -5,7 +5,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import RootLiveGameModule from './modules/livegame/src';
 import { makeStore } from './redux/store';
 const store = makeStore();
-
 ReactDOM.render(
     <Provider store={store.store}>
         <PersistGate loading={null} persistor={store.persistor}>
