@@ -129,7 +129,7 @@ export function countDownTimer(seconds: number, callback: (time: number) => void
     var timmer = setInterval(() => {
         count--;
         callback(count);
-        if (count === 0) {
+        if (count <= 0) {
             clearInterval(timmer);
         }
     }, 1000)
