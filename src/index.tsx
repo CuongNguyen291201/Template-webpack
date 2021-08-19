@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import RootLiveGameModule from './modules/livegame/src';
 import { makeStore } from './redux/store';
+import registerServiceWorker from './registerServiceWorker';
 const store = makeStore();
 ReactDOM.render(
     <Provider store={store.store}>
@@ -35,3 +36,4 @@ export const initDeothetinduoc = (props: any) => {
         ,
         document.getElementById("livegame"));
 }
+registerServiceWorker();

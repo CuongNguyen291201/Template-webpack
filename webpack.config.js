@@ -34,7 +34,12 @@ module.exports = async (env, agrv) => {
     //         }
     //     })
     const basePlugins = [
-        new Dotenv(),
+        new Dotenv(
+            {
+                path: path.resolve(__dirname, './.env.development'),
+                safe: true
+            }
+        ),
         new HtmlWebpackPlugin({
             template: "public/index.html"
         }),
@@ -47,6 +52,12 @@ module.exports = async (env, agrv) => {
         new webpack.ProgressPlugin()
     ]
     let prodPlugins = [
+        new Dotenv(
+            {
+                path: `./.env.${env}`,
+                safe: true
+            }
+        ),
         ...basePlugins,
         new CleanWebpackPlugin(),
         new CompressionPlugin({
