@@ -54,7 +54,7 @@ module.exports = async (env, agrv) => {
     let prodPlugins = [
         new Dotenv(
             {
-                path: `./.env.${env}`,
+                path: path.resolve(__dirname, './.env.production'),
                 safe: true
             }
         ),
