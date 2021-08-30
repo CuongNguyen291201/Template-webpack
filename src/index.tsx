@@ -11,8 +11,8 @@ ReactDOM.render(
         <PersistGate loading={null} persistor={store.persistor}>
             <RootLiveGameModule
                 oldSystemUser={{
-                    account: "kiendeptrai23456",
-                    name: "Kiên Handsome 12"
+                    account: "kiendeptrai2345678",
+                    name: "Kiên Handsome 123"
                 }}
             />
         </PersistGate>
