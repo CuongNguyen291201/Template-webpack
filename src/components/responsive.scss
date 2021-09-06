@@ -1,0 +1,20 @@
+$sm:575.98px;
+$md:767.98px;
+$lg:991.98px;
+$xl:1199.98px;
+
+
+@mixin responsive($canvas) {
+  @if $canvas == sm {
+    @media (max-width: $sm) { @content; }
+  }
+  @if $canvas == md {
+    @media (max-width: $md) { @content; }
+  }
+  @if $canvas == lg {
+    @media (max-width: $lg) { @content; }
+  }
+  @if $canvas == xl {
+    @media (max-width: $xl) { @content; }
+  }
+}
