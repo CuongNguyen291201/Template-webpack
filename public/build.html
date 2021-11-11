@@ -18,26 +18,10 @@
             </script> -->
 </head>
 <script type="text/javascript">
-    function initModuleGame(data, callback) {
-        try {
-            ElearningLiveGame.initDeothetinduoc({
-                account: "kientest1",
-                name: "XXX2"
-            });
-        } catch (e) {
-            console.log("???????", e)
-            setTimeout(() => {
-                initModuleGame(data, callback)
-            }, 1000)
-        }
-    }
-    setTimeout(() => {
-        initModuleGame()
-    }, 2000)
 </script>
 
 <body>
-    <div id="livegame"></div>
+    <div id="root"></div>
 </body>
 
 </html>

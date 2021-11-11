@@ -2,7 +2,7 @@
     "name": "elearning-livegame-web",
     "version": "1.0.0",
     "main": "index.js",
-    "author": "Kien Nguyen <nguyenphuctrungkien@gmail.com> (https://facebook.com/nguyentrungkien1712)",
+    "author": "Kien Nguyen",
     "license": "MIT",
     "dependencies": {
         "@material-ui/core": "4.12.3",
